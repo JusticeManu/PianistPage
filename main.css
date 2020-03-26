@@ -37,6 +37,49 @@
 
 /* General styles */
 
+.scene {
+  width: 20rem;
+  height: 26rem;
+  margin: 4rem 0;
+  /* border: .5px solid rgb(0, 51, 59); */
+  perspective: 60rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center right;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.card:hover {
+  transform: translateX(-100%) rotateY(-160deg);
+}
+
+.card__face {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+  font-size: 3rem;
+  color: white;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+
+.card__face--front {
+  background-color: rgb(139, 16, 0);
+}
+
+.card__face--back {
+  background-color: rgb(40, 2, 75);
+  transform: rotateY(180deg);
+}
+
 /* endable this to add smooth scrolling */
 /* html {
     scroll-behavior: smooth;
@@ -91,7 +134,7 @@ h3 {
 }
 
 .section__title {
-  margin-bottom: 0.25em;
+  margin-top: 40%;
 }
 
 .section__title--intro {
@@ -103,7 +146,9 @@ h3 {
 }
 
 .section__subtitle {
-  margin: 0;
+  margin-top: -200px;
+
+  border: 2px solid red;
   font-size: var(--fs-h3);
 }
 
@@ -155,7 +200,7 @@ h3 {
     grid-row: 2;
     text-align: right;
     position: relative;
-    left: -1.5em;
+    left: 7em;
     width: calc(100% + 1.5em);
     clip-path: polygon(
       0% 0%,
@@ -257,6 +302,7 @@ h3 {
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: -10%;
 }
 
 .portfolio-item-individual p {
