@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+#wrapper {
+  position: relative;
+  min-height: 55vw;
+  width: 100%;
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer .content-wrap {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+}
+.layer .content-body {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: white;
+}
+.layer img {
+  -webkit-border-radius: 19px 18px 18px 18px;
+  -moz-border-radius: 19px 18px 18px 18px;
+  border-radius: 19px 18px 18px 18px;
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layer h1 {
+  font-size: 2em;
+}
+.bottom {
+  background: #222;
+  z-index: 1;
+}
+.bottom .content-body {
+  right: 5%;
+}
+.bottom h1 {
+  color: #fdab00;
+}
+.top {
+  background: #eee;
+  color: #222;
+  z-index: 2;
+  width: 50vw;
+}
+.top .content-body {
+  left: 5%;
+  color: #222;
+}
+
+.handle {
+  position: absolute;
+  height: 100%;
+  display: block;
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+  background-color: orangered;
+}
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translate(-50%);
+  height: 2000%;
+  transform-origin: top;
+}
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+.skewed .top .content-wrap {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+.tube-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  margin: 0.5rem;
+  display: flex;
+  padding: 0.5rem;
+  color: #f7f7f6;
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: all 0.5s;
+  border-radius: 15%;
+}
+.info-btns {
+  display: flex;
+}
+.info-btns a {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.discover-btn {
+  background-color: #a4a4a4;
+}
+.cart-btn {
+  background-color: #141110;
+}
+.discover-btn:hover,
+.cart-btn:hover {
+  box-shadow: 3px 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-1rem);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
+}
