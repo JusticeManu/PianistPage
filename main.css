@@ -17,7 +17,7 @@
   --clr-dark: #303030;
   --clr-accent: #fdab00;
 
-  --fs-h1: 3rem;
+  --fs-h1: 30vw;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
@@ -125,6 +125,12 @@ h3 {
 
 h1 {
   font-size: var(--fs-h1);
+  background-image: url(https://images.unsplash.com/photo-1580044305912-70d6e42062cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 h2 {
   font-size: var(--fs-h2);
