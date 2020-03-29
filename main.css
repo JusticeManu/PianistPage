@@ -15,7 +15,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #fdab00;
+  --clr-accent: rgb(177, 175, 164);
 
   --fs-h1: 30vw;
   --fs-h2: 2.25rem;
@@ -131,6 +131,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  object-fit: cover;
 }
 h2 {
   font-size: var(--fs-h2);
@@ -154,7 +155,8 @@ h3 {
 .section__subtitle {
   margin-top: -200px;
 
-  border: 2px solid red;
+  border: 2px solid rgb(139, 16, 0);
+  outline: 50px rgb(139, 16, 0);
   font-size: var(--fs-h3);
 }
 
@@ -309,10 +311,25 @@ h3 {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: -10%;
+  columns: 250px 2;
+  padding-top: 0px;
+  column-span: initial;
+  column-rule: 20px grey;
+  margin-right: 150px;
 }
 
 .portfolio-item-individual p {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+.portfolio-item-individual a {
+  text-decoration: none;
+  outline: 3px solid grey;
+
+  padding: 0.5rem 1rem;
+}
+
+.portfolio-item-individual a:hover {
+  outline: 2px solid grey;
 }
