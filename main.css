@@ -323,6 +323,13 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+.portfolio-item-individual p::selection {
+  background-color: brown;
+  color: white;
+}
+.portfolio-item-individual p::first-letter {
+  font-size: 2rem;
+}
 .portfolio-item-individual a {
   text-decoration: none;
   outline: 3px solid grey;
